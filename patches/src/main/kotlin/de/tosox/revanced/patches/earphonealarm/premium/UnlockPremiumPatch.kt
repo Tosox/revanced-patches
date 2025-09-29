@@ -9,7 +9,7 @@ val unlockPremiumPatch = bytecodePatch(
     description = "Unlocks the Premium plan",
 ) {
     // Tested with 2.2.4
-    compatibleWith("com.wixsite.ut_app.utalarn")
+    compatibleWith("com.wixsite.ut_app.utalarm")
 
     execute {
         getPlanStatusFingerprint.method.addInstruction(
