@@ -5,6 +5,13 @@
 
 * **MEGA:** Add `Hide Ads` patch ([3cdf108](https://github.com/Tosox/revanced-patches/commit/3cdf1083d7e727c2ac105efe107e9ed46016b82b))
 
+# 1.0.0 (2025-09-29)
+
+
+### Features
+
+* **MEGA:** Add `Hide Ads` patch ([3cdf108](https://github.com/Tosox/revanced-patches/commit/3cdf1083d7e727c2ac105efe107e9ed46016b82b))
+
 ## [1.0.4](https://github.com/ReVanced/revanced-patches-template/compare/v1.0.3...v1.0.4) (2024-11-05)
 
 ## [1.0.4-dev.2](https://github.com/ReVanced/revanced-patches-template/compare/v1.0.4-dev.1...v1.0.4-dev.2) (2024-11-05)
