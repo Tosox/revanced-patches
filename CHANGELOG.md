@@ -1,3 +1,10 @@
+## [1.1.1-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.1.0...v1.1.1-dev.1) (2025-09-29)
+
+
+### Bug Fixes
+
+* **Earphone Alarm:** Fix `Unlock Premium` patch package name ([53f0bf8](https://github.com/Tosox/revanced-patches/commit/53f0bf82b9629b2f447be7a553f7574769b47048))
+
 ### Bug Fixes
 
 * **Earphone Alarm:** Fix `Unlock Premium` patch package name ([53f0bf8](https://github.com/Tosox/revanced-patches/commit/53f0bf82b9629b2f447be7a553f7574769b47048))
