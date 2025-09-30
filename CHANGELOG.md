@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Tosox/revanced-patches/compare/v1.1.1...v1.2.0) (2025-09-30)
+
+
+### Features
+
+* **TickTick:** Try add `Unlock Pro` patch ([a979324](https://github.com/Tosox/revanced-patches/commit/a979324cd968813fc2d1424f661baed8eb024289))
+
 # [1.2.0-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.1.1...v1.2.0-dev.1) (2025-09-30)
 
 
