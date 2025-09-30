@@ -6,3 +6,11 @@ public final class de/tosox/revanced/patches/mega/ads/HideAdsPatchKt {
 	public static final fun getHideAdsPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
+public final class de/tosox/revanced/patches/ticktick/pro/UnlockProPatchKt {
+	public static final fun getUnlockProPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class de/tosox/revanced/patches/ticktick/verify/NoIntegrityCheckPatchKt {
+	public static final fun getNoIntegrityCheckPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
