@@ -11,7 +11,6 @@
 ### Bug Fixes
 
 * **Project setup:** Try fix project setup ([7c279c6](https://github.com/Tosox/revanced-patches/commit/7c279c6a296a75299f39066308804429d5516ec3))
-* **Project setup:** Try fix project setup ([95c0bef](https://github.com/Tosox/revanced-patches/commit/95c0bef7745c7e59f87c4bb12862a20051a6103d))
 
 ## [1.2.2-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.2.1...v1.2.2-dev.1) (2025-10-02)
 
