@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.library)
+    id(libs.plugins.android.library.get().pluginId)
 }
 
 android {
