@@ -1,3 +1,10 @@
+## [1.2.3-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.2.2...v1.2.3-dev.1) (2025-10-02)
+
+
+### Bug Fixes
+
+* **TickTick:** Try fix `Unlock Pro` patch ([6ebfb0e](https://github.com/Tosox/revanced-patches/commit/6ebfb0e378cd5b2cc22d3914ebc0a5edbb0df6cb))
+
 ## [1.2.2](https://github.com/Tosox/revanced-patches/compare/v1.2.1...v1.2.2) (2025-10-02)
 
 
