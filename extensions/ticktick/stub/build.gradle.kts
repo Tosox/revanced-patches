@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.library)
+    id(libs.plugins.android.library.get().pluginId)
 }
 
 android {
@@ -7,6 +7,11 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 24
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }

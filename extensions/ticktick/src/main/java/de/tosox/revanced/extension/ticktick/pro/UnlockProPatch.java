@@ -3,7 +3,7 @@ package de.tosox.revanced.extension.ticktick.pro;
 import com.ticktick.task.data.User;
 
 @SuppressWarnings("unused")
-public class UnlockProPatch {
+public final class UnlockProPatch {
 	public static boolean shouldBePro(User user) {
 		return user.username != null; // && !user.username.isEmpty()
 	}

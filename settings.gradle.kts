@@ -16,5 +16,18 @@ pluginManagement {
 }
 
 plugins {
-    id("app.revanced.patches") version "1.0.0-dev.6"
+    id("app.revanced.patches") version "1.0.0-dev.7"
+}
+
+settings {
+    extensions {
+        defaultNamespace = "de.tosox.revanced.extension"
+
+        proguardFiles(
+            rootProject
+                .projectDir
+                .resolve("extensions/proguard-rules.pro")
+                .toString()
+        )
+    }
 }
