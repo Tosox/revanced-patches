@@ -14,6 +14,10 @@ val unlockProPatch = bytecodePatch(
     // Tested with 7.6.9.1
     compatibleWith("com.ticktick.task")
 
+    extendWith("extensions/ticktick.rve")
+
+    dependsOn(noIntegrityCheckPatch)
+
     execute {
         isProFingerprint.method.addInstructions(
             0,
