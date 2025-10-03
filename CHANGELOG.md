@@ -1,3 +1,10 @@
+# [1.3.0-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.2.3-dev.4...v1.3.0-dev.1) (2025-10-03)
+
+
+### Features
+
+* **kicker:** Add `Unlock Pur` and `Unlock Plus` patches ([b06d012](https://github.com/Tosox/revanced-patches/commit/b06d012292da9875aa4ee39e9c360e059d19c04e))
+
 ## [1.2.3-dev.4](https://github.com/Tosox/revanced-patches/compare/v1.2.3-dev.3...v1.2.3-dev.4) (2025-10-02)
 
 
