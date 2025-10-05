@@ -5,6 +5,6 @@ import com.ticktick.task.data.User;
 @SuppressWarnings("unused")
 public final class UnlockProPatch {
 	public static boolean shouldBePro(User user) {
-		return user.username != null; // && !user.username.isEmpty()
+		return user.getUsername() != null;
 	}
 }

@@ -5,7 +5,6 @@ import app.revanced.patcher.patch.bytecodePatch
 import de.tosox.revanced.patches.ticktick.verify.noIntegrityCheckPatch
 
 internal const val EXTENSION_CLASS_DESCRIPTOR = "Lde/tosox/revanced/extension/ticktick/pro/UnlockProPatch;"
-internal const val EXTENSION_METHOD_NAME = "shouldBePro"
 
 @Suppress("unused")
 val unlockProPatch = bytecodePatch(
@@ -23,7 +22,7 @@ val unlockProPatch = bytecodePatch(
         isProFingerprint.method.addInstructions(
             0,
             """
-                invoke-static { p0 }, $EXTENSION_CLASS_DESCRIPTOR->$EXTENSION_METHOD_NAME(Lcom/ticktick/task/data/User;)Z
+                invoke-static { p0 }, $EXTENSION_CLASS_DESCRIPTOR->shouldBePro(Lcom/ticktick/task/data/User;)Z
                 move-result v0
                 return v0
             """

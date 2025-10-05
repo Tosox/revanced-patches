@@ -4,10 +4,10 @@ plugins {
 
 android {
     namespace = "de.tosox.revanced.extension"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 21
     }
 
     compileOptions {
