@@ -1,3 +1,11 @@
+public final class de/tosox/revanced/patches/customstickermaker/pro/UnlockProPatchKt {
+	public static final fun getUnlockProPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class de/tosox/revanced/patches/customstickermaker/verify/NoIntegrityCheckPatchKt {
+	public static final fun getNoIntegrityCheckPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class de/tosox/revanced/patches/earphonealarm/premium/UnlockPremiumPatchKt {
 	public static final fun getUnlockPremiumPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
