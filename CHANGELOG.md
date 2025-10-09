@@ -1,3 +1,10 @@
+# [1.4.0-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.3.0...v1.4.0-dev.1) (2025-10-09)
+
+
+### Features
+
+* **Flatastic:** Add `Unlock Premium` patch ([e1dea42](https://github.com/Tosox/revanced-patches/commit/e1dea4259e7b185f31bf08a0aaf2df51857f7156))
+
 # [1.3.0](https://github.com/Tosox/revanced-patches/compare/v1.2.2...v1.3.0) (2025-10-05)
 
 
