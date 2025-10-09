@@ -2,6 +2,10 @@ public final class de/tosox/revanced/patches/earphonealarm/premium/UnlockPremium
 	public static final fun getUnlockPremiumPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
+public final class de/tosox/revanced/patches/flatastic/premium/UnlockPremiumPatchKt {
+	public static final fun getUnlockPremiumPatch ()Lapp/revanced/patcher/patch/RawResourcePatch;
+}
+
 public final class de/tosox/revanced/patches/kicker/plus/UnlockPlusPatchKt {
 	public static final fun getUnlockPlusPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
