@@ -2,23 +2,10 @@ package de.tosox.revanced.patches.customstickermaker.verify
 
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
-import app.revanced.patcher.fingerprint
 import app.revanced.patcher.patch.bytecodePatch
 import com.android.tools.smali.dexlib2.Opcode
-
-internal fun getSignatureCheckFingerprint() = fingerprint {
-    strings(
-        "this as java.lang.String...ing(startIndex, endIndex)",
-        "this as java.lang.String).getBytes(charset)"
-    )
-    opcodes(
-        Opcode.INVOKE_STATIC,
-        Opcode.THROW,
-        Opcode.INVOKE_VIRTUAL,
-        Opcode.INVOKE_STATIC,
-        Opcode.THROW
-    )
-}
+import com.android.tools.smali.dexlib2.iface.Method
+import de.tosox.revanced.util.findMutableMethodOf
 
 @Suppress("unused")
 val noIntegrityCheckPatch = bytecodePatch(
@@ -38,17 +25,49 @@ val noIntegrityCheckPatch = bytecodePatch(
             """
         )
 
-        // FIXME: The signature can be inserted multiple times per method
+        // Nop all 'throw null's in signature checks
+        val opcodePattern = listOf(
+            Opcode.INVOKE_STATIC,
+            Opcode.THROW,
+            Opcode.INVOKE_VIRTUAL,
+            Opcode.INVOKE_STATIC,
+            Opcode.THROW
+        )
 
-        classes.forEach { classDef ->
-            classDef.methods.forEach { method ->
-                val signatureCheckFingerprint = getSignatureCheckFingerprint()
-                val match = signatureCheckFingerprint.matchOrNull(method)
-                if (match != null) {
-                    val matchIndex = match.patternMatch!!.endIndex
-                    match.method.replaceInstruction(
-                        matchIndex, "nop"
-                    )
+        val patches = buildMap {
+            classes.forEach { classDef ->
+                val methodMap = buildMap<Method, ArrayDeque<Int>> {
+                    classDef.methods.forEach { method ->
+                        val instructions = method.implementation?.instructions?.toList() ?: return@forEach
+                        val indices = ArrayDeque<Int>()
+
+                        for (i in 0..instructions.size - opcodePattern.size) {
+                            var match = true
+                            for (j in opcodePattern.indices) {
+                                if (instructions[i + j].opcode != opcodePattern[j]) {
+                                    match = false
+                                    break
+                                }
+                            }
+                            if (match) {
+                                indices.add(i + opcodePattern.size - 1)
+                            }
+                        }
+
+                        if (indices.isNotEmpty()) put(method, indices)
+                    }
+                }
+                if (methodMap.isNotEmpty()) put(classDef, methodMap)
+            }
+        }
+
+        patches.forEach { (classDef, methods) ->
+            val mutableClass = proxy(classDef).mutableClass
+            methods.forEach { (method, indices) ->
+                val mutableMethod = mutableClass.findMutableMethodOf(method)
+                while (indices.isNotEmpty()) {
+                    val index = indices.removeLast()
+                    mutableMethod.replaceInstruction(index, "nop")
                 }
             }
         }

@@ -5,7 +5,7 @@ import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
 internal val isProFingerprint = fingerprint {
-    accessFlags(AccessFlags.PUBLIC)
+    accessFlags(AccessFlags.PUBLIC, AccessFlags.STATIC)
     returns("Z")
     parameters()
     strings("isPro")

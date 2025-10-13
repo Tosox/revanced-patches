@@ -1,8 +1,8 @@
 package de.tosox.revanced.patches.customstickermaker.pro
 
-import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.patch.bytecodePatch
 import de.tosox.revanced.patches.customstickermaker.verify.noIntegrityCheckPatch
+import de.tosox.revanced.util.returnEarly
 
 @Suppress("unused")
 val unlockProPatch = bytecodePatch(
@@ -15,12 +15,6 @@ val unlockProPatch = bytecodePatch(
     dependsOn(noIntegrityCheckPatch)
 
     execute {
-        isProFingerprint.method.addInstructions(
-            0,
-            """
-            const/4 v0, 0x1
-            return v0
-        """
-        )
+        isProFingerprint.method.returnEarly(true)
     }
 }
