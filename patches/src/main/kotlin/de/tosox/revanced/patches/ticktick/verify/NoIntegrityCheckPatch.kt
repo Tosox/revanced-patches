@@ -18,11 +18,9 @@ val noIntegrityCheckPatch = bytecodePatch(
             val mvIndex = verifyJobFingerprint.patternMatch!!.startIndex
             val mvRegister = getInstruction<OneRegisterInstruction>(mvIndex).registerA
 
-            verifyJobFingerprint.method.replaceInstruction(
+            replaceInstruction(
                 mvIndex,
-                """
-                    const/4 v$mvRegister, 0x0
-                """
+                "const/4 v$mvRegister, 0x0"
             )
         }
     }
