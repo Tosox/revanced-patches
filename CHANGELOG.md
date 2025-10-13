@@ -18,10 +18,6 @@
 ### Bug Fixes
 
 * **TickTick:** Fix `Unlock Pro` patch ([a86ec51](https://github.com/Tosox/revanced-patches/commit/a86ec51ddbdf6ec0cead190f80528ecece978c75))
-* **TickTick:** Try fix `Unlock Pro` patch ([a7ead05](https://github.com/Tosox/revanced-patches/commit/a7ead052f01d5f85db9efeafb4a1888b1853a7b0))
-* **TickTick:** Try fix `Unlock Pro` patch ([c983aa4](https://github.com/Tosox/revanced-patches/commit/c983aa456e95cce32fc974ceba4122f2f24f45a2))
-* **TickTick:** Try fix `Unlock Pro` patch ([6d670cb](https://github.com/Tosox/revanced-patches/commit/6d670cba4a9b34179d513458792abfed6c754aec))
-* **TickTick:** Try fix `Unlock Pro` patch ([6ebfb0e](https://github.com/Tosox/revanced-patches/commit/6ebfb0e378cd5b2cc22d3914ebc0a5edbb0df6cb))
 
 
 ### Features
@@ -84,7 +80,6 @@
 ### Bug Fixes
 
 * **Earphone Alarm:** Fix `Unlock Premium` patch ([d5bca27](https://github.com/Tosox/revanced-patches/commit/d5bca272976504a869565326595babce2ba176bc))
-* **TickTick:** Fix `Unlock Pro` patch ([8271bb1](https://github.com/Tosox/revanced-patches/commit/8271bb1145330e1be09f6dea08857a39c8d2bc22))
 
 ## [1.2.1-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.2.0...v1.2.1-dev.1) (2025-09-30)
 
@@ -92,7 +87,6 @@
 ### Bug Fixes
 
 * **Earphone Alarm:** Fix `Unlock Premium` patch ([d5bca27](https://github.com/Tosox/revanced-patches/commit/d5bca272976504a869565326595babce2ba176bc))
-* **TickTick:** Fix `Unlock Pro` patch ([8271bb1](https://github.com/Tosox/revanced-patches/commit/8271bb1145330e1be09f6dea08857a39c8d2bc22))
 
 # [1.2.0](https://github.com/Tosox/revanced-patches/compare/v1.1.1...v1.2.0) (2025-09-30)
 
