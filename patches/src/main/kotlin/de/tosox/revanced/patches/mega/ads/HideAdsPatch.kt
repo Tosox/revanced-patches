@@ -1,22 +1,17 @@
 package de.tosox.revanced.patches.mega.ads
 
-import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.patch.bytecodePatch
+import de.tosox.revanced.util.returnEarly
 
 @Suppress("unused")
 val hideAdsPatch = bytecodePatch(
     name = "Hide Ads",
     description = "Hides ads across the app",
 ) {
-    // Tested with 15.17(252540921)(aca7200e36)
+    // Tested with 15.18(252751615)(9425f68761)
     compatibleWith("mega.privacy.android.app")
 
     execute {
-        showAdsFingerprint.method.addInstruction(
-            0,
-            """
-                return-void
-             """
-        )
+        showAdsFingerprint.method.returnEarly()
     }
 }

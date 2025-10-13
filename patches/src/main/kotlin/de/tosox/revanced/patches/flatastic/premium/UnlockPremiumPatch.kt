@@ -5,7 +5,7 @@ import app.revanced.patcher.patch.rawResourcePatch
 @Suppress("unused")
 val unlockPremiumPatch = rawResourcePatch(
     name = "Unlock Premium",
-    description = "Unlocks the Premium plan",
+    description = "Unlocks the Premium subscription",
 ) {
     // Tested with 3.11.0
     compatibleWith("com.flatastic.app")
