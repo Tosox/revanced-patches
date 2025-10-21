@@ -1,7 +1,7 @@
 package de.tosox.revanced.patches.kicker.pur
 
 import app.revanced.patcher.patch.bytecodePatch
-import de.tosox.revanced.patches.kicker.common.injectEnumReturn
+import de.tosox.revanced.util.injectEnumReturnByString
 
 @Suppress("unused")
 val unlockPurPatch = bytecodePatch(
@@ -12,6 +12,6 @@ val unlockPurPatch = bytecodePatch(
     compatibleWith("com.netbiscuits.kicker")
 
     execute {
-        injectEnumReturn(getAboStateFingerprint.method, "PUR")
+        injectEnumReturnByString(getAboStateFingerprint.method, "PUR")
     }
 }
