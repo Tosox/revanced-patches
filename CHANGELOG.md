@@ -1,3 +1,10 @@
+# [1.5.0-dev.2](https://github.com/Tosox/revanced-patches/compare/v1.5.0-dev.1...v1.5.0-dev.2) (2025-10-21)
+
+
+### Bug Fixes
+
+* **Super Mario:** Fix `Offline Privacy` patch ([c22ba76](https://github.com/Tosox/revanced-patches/commit/c22ba76110d362d3678fdeda7ba36e3441f71dd8))
+
 # [1.5.0-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.4.0...v1.5.0-dev.1) (2025-10-21)
 
 
