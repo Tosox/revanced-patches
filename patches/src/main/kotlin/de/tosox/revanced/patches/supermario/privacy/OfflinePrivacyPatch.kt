@@ -20,6 +20,12 @@ private val disableInternetPermissionPatch = resourcePatch {
                             ?.nodeValue?.equals("android.permission.INTERNET") == true
                     }
                 )
+                removeChild(
+                    childElementsSequence().first {
+                        it.attributes.getNamedItem("android:name")
+                            ?.nodeValue?.equals("android.permission.ACCESS_NETWORK_STATE") == true
+                    }
+                )
             }
         }
     }
