@@ -42,8 +42,11 @@ val offlinePrivacyPatch = bytecodePatch(
     dependsOn(disableInternetPermissionPatch)
 
     execute {
-        // Nullify method to disable crashes because of no internet access
+        // Nullify method to stop crashes because of no internet access
         appInstallFingerprint.method.returnEarly()
+
+        // Return false to stop crashes when the application is not signed with a test key
+        isNetworkConnectedFingerprint.method.returnEarly(false)
 
         // TODO: Create shared prefs shared patch
         checkErrorFingerprint.method.apply {
