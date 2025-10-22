@@ -13,6 +13,12 @@ internal val appInstallFingerprint = fingerprint {
     }
 }
 
+internal val isNetworkConnectedFingerprint = fingerprint {
+    custom { method, classDef ->
+        classDef.endsWith("/Utils;") && method.name == "isNetworkConnected"
+    }
+}
+
 internal val checkErrorFingerprint = fingerprint {
     strings("false")
     custom { method, classDef ->
