@@ -2,10 +2,13 @@ package de.tosox.revanced.patches.customstickermaker.verify
 
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
+import app.revanced.patcher.fingerprint
 import app.revanced.patcher.patch.bytecodePatch
+import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.Method
 import de.tosox.revanced.util.findMutableMethodOf
+import de.tosox.revanced.util.returnEarly
 
 @Suppress("unused")
 val noIntegrityCheckPatch = bytecodePatch(
@@ -69,6 +72,18 @@ val noIntegrityCheckPatch = bytecodePatch(
                     val index = indices.removeLast()
                     mutableMethod.replaceInstruction(index, "nop")
                 }
+            }
+        }
+
+        classes.forEach { classDef ->
+            classDef.methods.forEach { method ->
+                val fingerprint = fingerprint {
+                    accessFlags(AccessFlags.PUBLIC, AccessFlags.STATIC)
+                    strings("System.exit returned normally, while it was supposed to halt JVM.")
+                    returns("V")
+                }
+
+                fingerprint.matchOrNull(method)?.method?.returnEarly()
             }
         }
     }
