@@ -11,7 +11,7 @@ val unlockPremiumPatch = bytecodePatch(
     // Tested with 2.2.4
     compatibleWith("com.wixsite.ut_app.utalarm")
 
-    execute {
-        getPlanStatusFingerprint.method.returnEarly(1)
+    apply {
+        getPlanStatusFingerprint.returnEarly(1)
     }
 }

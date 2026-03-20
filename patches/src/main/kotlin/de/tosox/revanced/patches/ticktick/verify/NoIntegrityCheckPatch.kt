@@ -13,9 +13,9 @@ val noIntegrityCheckPatch = bytecodePatch(
     // Tested with 7.6.9.1
     compatibleWith("com.ticktick.task")
 
-    execute {
+    apply {
         verifyJobFingerprint.method.apply {
-            val mvIndex = verifyJobFingerprint.patternMatch!!.startIndex
+            val mvIndex = verifyJobFingerprint[0]
             val mvRegister = getInstruction<OneRegisterInstruction>(mvIndex).registerA
 
             replaceInstruction(

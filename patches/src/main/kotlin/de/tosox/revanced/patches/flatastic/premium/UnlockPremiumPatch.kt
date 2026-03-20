@@ -10,7 +10,7 @@ val unlockPremiumPatch = rawResourcePatch(
     // Tested with 3.11.0
     compatibleWith("com.flatastic.app")
 
-    execute {
+    apply {
         get("assets/www/redesign.bundle.js").apply {
             val js = readText()
                 .replace(

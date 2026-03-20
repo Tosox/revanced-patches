@@ -1,34 +1,31 @@
 package de.tosox.revanced.patches.supermario.privacy
 
-import app.revanced.patcher.fingerprint
+import app.revanced.patcher.*
+import app.revanced.patcher.patch.BytecodePatchContext
 
-internal val appInstallFingerprint = fingerprint {
-    parameters(
+internal val BytecodePatchContext.appInstallFingerprint by gettingFirstMethodDeclaratively {
+    parameterTypes(
         "Landroid/content/Context",
         "Ljava/lang/String",
         "Ljava/lang/String"
     )
-    custom { method, classDef ->
-        classDef.endsWith("/FacebookHelper;") && method.name == "appInstall"
-    }
+    name("appInstall")
+    definingClass("FacebookHelper;")
 }
 
-internal val isNetworkConnectedFingerprint = fingerprint {
-    custom { method, classDef ->
-        classDef.endsWith("/Utils;") && method.name == "isNetworkConnected"
-    }
+internal val BytecodePatchContext.isNetworkConnectedFingerprint by gettingFirstMethodDeclaratively {
+    name("isNetworkConnected")
+    definingClass("Utils;")
 }
 
-internal val checkErrorFingerprint = fingerprint {
+internal val BytecodePatchContext.checkErrorFingerprint by composingFirstMethod {
     strings("false")
-    custom { method, classDef ->
-        classDef.endsWith("/WebViewActivity;") && method.name == "checkError"
-    }
+    name("checkError")
+    definingClass("WebViewActivity;")
 }
 
-internal val onCreateFingerprint = fingerprint {
+internal val BytecodePatchContext.onCreateFingerprint by composingFirstMethod {
     strings("false")
-    custom { method, classDef ->
-        classDef.endsWith("/WebViewActivity;") && method.name == "onCreate"
-    }
+    name("onCreate")
+    definingClass("WebViewActivity;")
 }
