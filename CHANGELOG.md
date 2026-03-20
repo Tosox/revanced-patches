@@ -1,3 +1,12 @@
+## [1.5.2-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.5.1...v1.5.2-dev.1) (2026-03-20)
+
+
+### Bug Fixes
+
+* **workflow:** Release workflow ([157a551](https://github.com/Tosox/revanced-patches/commit/157a55168717f29afe00dcdacc9c0e445589cea3))
+* **workflow:** Release workflow ([61fe90d](https://github.com/Tosox/revanced-patches/commit/61fe90d2c954d4692b3be45425c67dcad5709efd))
+* **workflow:** Release workflow ([ab97029](https://github.com/Tosox/revanced-patches/commit/ab970296357702a9fb9412ba58875509fb9d65bc))
+
 ## [1.5.1](https://github.com/Tosox/revanced-patches/compare/v1.5.0...v1.5.1) (2025-10-22)
 
 
