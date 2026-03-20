@@ -1,3 +1,10 @@
+## [1.5.2-dev.2](https://github.com/Tosox/revanced-patches/compare/v1.5.2-dev.1...v1.5.2-dev.2) (2026-03-20)
+
+
+### Bug Fixes
+
+* **TickTick:** Wrong method signature ([49e24a9](https://github.com/Tosox/revanced-patches/commit/49e24a9507f68536d1a812ca568288b4e21c4dcc))
+
 ## [1.5.2-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.5.1...v1.5.2-dev.1) (2026-03-20)
 
 
