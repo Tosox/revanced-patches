@@ -11,6 +11,6 @@ internal val BytecodePatchContext.isProFingerprint by gettingFirstMethodDeclarat
 }
 
 internal val BytecodePatchContext.getProTypeForFakeFingerprint by gettingFirstMethodDeclaratively {
-    name("isProTypeForFake")
+    name("getProTypeForFake")
     definingClass("User;")
 }
