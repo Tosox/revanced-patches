@@ -11,7 +11,7 @@ val hideAdsPatch = bytecodePatch(
     // Tested with 15.18(252751615)(9425f68761)
     compatibleWith("mega.privacy.android.app")
 
-    execute {
-        showAdsFingerprint.method.returnEarly()
+    apply {
+        showAdsFingerprint.returnEarly()
     }
 }

@@ -1,9 +1,11 @@
 package de.tosox.revanced.patches.kicker.plus
 
-import app.revanced.patcher.fingerprint
+import app.revanced.patcher.definingClass
+import app.revanced.patcher.gettingFirstMethodDeclaratively
+import app.revanced.patcher.name
+import app.revanced.patcher.patch.BytecodePatchContext
 
-internal val getAboStatePlusFingerprint = fingerprint {
-    custom { method, classDef ->
-        classDef.endsWith("/KUserImpl;") && method.name == "getAboStatePlus"
-    }
+internal val BytecodePatchContext.getAboStatePlusFingerprint by gettingFirstMethodDeclaratively {
+    name("getAboStatePlus")
+    definingClass("KUserImpl;")
 }

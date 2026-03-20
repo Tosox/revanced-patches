@@ -1,15 +1,16 @@
 package de.tosox.revanced.patches.ticktick.pro
 
-import app.revanced.patcher.fingerprint
+import app.revanced.patcher.definingClass
+import app.revanced.patcher.gettingFirstMethodDeclaratively
+import app.revanced.patcher.name
+import app.revanced.patcher.patch.BytecodePatchContext
 
-internal val isProFingerprint = fingerprint {
-    custom { method, classDef ->
-        classDef.endsWith("/User;") && method.name == "isPro"
-    }
+internal val BytecodePatchContext.isProFingerprint by gettingFirstMethodDeclaratively {
+    name("isPro")
+    definingClass("User;")
 }
 
-internal val getProTypeForFakeFingerprint = fingerprint {
-    custom { method, classDef ->
-        classDef.endsWith("/User;") && method.name == "getProTypeForFake"
-    }
+internal val BytecodePatchContext.getProTypeForFakeFingerprint by gettingFirstMethodDeclaratively {
+    name("isProTypeForFake")
+    definingClass("User;")
 }

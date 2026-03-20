@@ -1,9 +1,11 @@
 package de.tosox.revanced.patches.earphonealarm.premium
 
-import app.revanced.patcher.fingerprint
+import app.revanced.patcher.definingClass
+import app.revanced.patcher.gettingFirstMethodDeclaratively
+import app.revanced.patcher.name
+import app.revanced.patcher.patch.BytecodePatchContext
 
-internal val getPlanStatusFingerprint = fingerprint {
-    custom { method, classDef ->
-        classDef.endsWith("/SharedPrefs;") && method.name == "getPlanStatus"
-    }
+internal val BytecodePatchContext.getPlanStatusFingerprint by gettingFirstMethodDeclaratively {
+    name("getPlanStatus")
+    definingClass("SharedPrefs;")
 }

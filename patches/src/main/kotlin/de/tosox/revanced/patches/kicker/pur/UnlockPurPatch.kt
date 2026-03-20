@@ -11,7 +11,7 @@ val unlockPurPatch = bytecodePatch(
     // Tested with 7.9.2
     compatibleWith("com.netbiscuits.kicker")
 
-    execute {
-        injectEnumReturnByString(getAboStateFingerprint.method, "PUR")
+    apply {
+        injectEnumReturnByString(getAboStateFingerprint, "PUR")
     }
 }

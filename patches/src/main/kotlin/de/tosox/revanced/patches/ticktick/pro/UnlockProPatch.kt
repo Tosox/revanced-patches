@@ -19,8 +19,8 @@ val unlockProPatch = bytecodePatch(
 
     dependsOn(noIntegrityCheckPatch)
 
-    execute {
-        isProFingerprint.method.addInstructions(
+    apply {
+        isProFingerprint.addInstructions(
             0,
             """
                 invoke-static { p0 }, $EXTENSION_CLASS_DESCRIPTOR->shouldBePro(Lcom/ticktick/task/data/User;)Z
@@ -29,6 +29,6 @@ val unlockProPatch = bytecodePatch(
             """
         )
 
-        getProTypeForFakeFingerprint.method.returnEarly(1)
+        getProTypeForFakeFingerprint.returnEarly(1)
     }
 }

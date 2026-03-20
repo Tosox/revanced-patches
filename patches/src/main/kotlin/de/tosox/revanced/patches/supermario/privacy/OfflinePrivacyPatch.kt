@@ -1,7 +1,7 @@
 package de.tosox.revanced.patches.supermario.privacy
 
-import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
-import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
+import app.revanced.patcher.extensions.getInstruction
+import app.revanced.patcher.extensions.replaceInstruction
 import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.patch.resourcePatch
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
@@ -11,7 +11,7 @@ import de.tosox.revanced.util.returnEarly
 
 // TODO: Add to shared patches
 private val disableInternetPermissionPatch = resourcePatch {
-    execute {
+    apply {
         document("AndroidManifest.xml").use { document ->
             document.getNode("manifest").apply {
                 removeChild(
@@ -41,16 +41,16 @@ val offlinePrivacyPatch = bytecodePatch(
 
     dependsOn(disableInternetPermissionPatch)
 
-    execute {
+    apply {
         // Nullify method to stop crashes because of no internet access
-        appInstallFingerprint.method.returnEarly()
+        appInstallFingerprint.returnEarly()
 
         // Return false to stop crashes when the application is not signed with a test key
-        isNetworkConnectedFingerprint.method.returnEarly(false)
+        isNetworkConnectedFingerprint.returnEarly(false)
 
         // TODO: Create shared prefs shared patch
         checkErrorFingerprint.method.apply {
-            val targetStringIndex = checkErrorFingerprint.stringMatches!!.first().index
+            val targetStringIndex = checkErrorFingerprint[0]
             val targetStringRegister = getInstruction<OneRegisterInstruction>(targetStringIndex).registerA
             replaceInstruction(
                 targetStringIndex,
@@ -59,7 +59,7 @@ val offlinePrivacyPatch = bytecodePatch(
         }
 
         onCreateFingerprint.method.apply {
-            val targetStringIndex = onCreateFingerprint.stringMatches!!.first().index
+            val targetStringIndex = onCreateFingerprint[0]
             val targetStringRegister = getInstruction<OneRegisterInstruction>(targetStringIndex).registerA
             replaceInstruction(
                 targetStringIndex,

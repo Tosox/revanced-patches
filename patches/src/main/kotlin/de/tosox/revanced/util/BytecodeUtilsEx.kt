@@ -1,10 +1,13 @@
 package de.tosox.revanced.util
 
-import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
-import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
-import app.revanced.patcher.fingerprint
+import app.revanced.com.android.tools.smali.dexlib2.mutable.MutableMethod
+import app.revanced.patcher.extensions.addInstructions
+import app.revanced.patcher.extensions.getInstruction
+import app.revanced.patcher.firstMethodComposite
+import app.revanced.patcher.name
 import app.revanced.patcher.patch.BytecodePatchContext
-import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
+import app.revanced.patcher.strings
+import app.revanced.patcher.type
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
@@ -14,15 +17,14 @@ fun BytecodePatchContext.findEnumStaticField(
     enumType: String
 ): String? {
     // Find the enum <clinit> that contains the constant string and the sput to a static field
-    val enumFingerprint = fingerprint {
+    val enumFingerprint = firstMethodComposite {
         strings(enumString)
-        custom { method, classDef ->
-            classDef.type == enumType && method.name == "<clinit>"
-        }
+        name("<clinit>")
+        type(enumType)
     }
 
     // Index of the const-string match in the method's instruction list
-    val stringMatchIndex = enumFingerprint.stringMatches!!.first().index
+    val stringMatchIndex = enumFingerprint[0]
 
     // Find the first SPUT_OBJECT instruction that stores that string into a static field
     val sputIndex = enumFingerprint.method
