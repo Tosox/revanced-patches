@@ -1,3 +1,10 @@
+## [1.5.2-dev.3](https://github.com/Tosox/revanced-patches/compare/v1.5.2-dev.2...v1.5.2-dev.3) (2026-03-20)
+
+
+### Bug Fixes
+
+* patches.api definition ([6470a84](https://github.com/Tosox/revanced-patches/commit/6470a84892e6c46044bc96d1d224a7cb5506581d))
+
 ## [1.5.2-dev.2](https://github.com/Tosox/revanced-patches/compare/v1.5.2-dev.1...v1.5.2-dev.2) (2026-03-20)
 
 
