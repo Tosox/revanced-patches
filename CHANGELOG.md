@@ -1,3 +1,14 @@
+## [1.5.2](https://github.com/Tosox/revanced-patches/compare/v1.5.1...v1.5.2) (2026-03-20)
+
+
+### Bug Fixes
+
+* patches.api definition ([6470a84](https://github.com/Tosox/revanced-patches/commit/6470a84892e6c46044bc96d1d224a7cb5506581d))
+* **TickTick:** Wrong method signature ([49e24a9](https://github.com/Tosox/revanced-patches/commit/49e24a9507f68536d1a812ca568288b4e21c4dcc))
+* **workflow:** Release workflow ([157a551](https://github.com/Tosox/revanced-patches/commit/157a55168717f29afe00dcdacc9c0e445589cea3))
+* **workflow:** Release workflow ([61fe90d](https://github.com/Tosox/revanced-patches/commit/61fe90d2c954d4692b3be45425c67dcad5709efd))
+* **workflow:** Release workflow ([ab97029](https://github.com/Tosox/revanced-patches/commit/ab970296357702a9fb9412ba58875509fb9d65bc))
+
 ## [1.5.2-dev.3](https://github.com/Tosox/revanced-patches/compare/v1.5.2-dev.2...v1.5.2-dev.3) (2026-03-20)
 
 
