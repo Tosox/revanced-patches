@@ -18,6 +18,10 @@ public final class de/tosox/revanced/patches/mega/ads/HideAdsPatchKt {
 	public static final fun getHideAdsPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
+public final class de/tosox/revanced/patches/strong/pro/UnlockProPatchKt {
+	public static final fun getUnlockProPatch ()Lapp/revanced/patcher/patch/Patch;
+}
+
 public final class de/tosox/revanced/patches/supermario/privacy/OfflinePrivacyPatchKt {
 	public static final fun getOfflinePrivacyPatch ()Lapp/revanced/patcher/patch/Patch;
 }
