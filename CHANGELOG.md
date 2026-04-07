@@ -1,3 +1,10 @@
+# [1.6.0-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.5.2...v1.6.0-dev.1) (2026-04-07)
+
+
+### Features
+
+* **Strong:** Add Unlock Pro patch ([274961d](https://github.com/Tosox/revanced-patches/commit/274961d012fd91c370652b0ca213b4ad488f6849))
+
 ## [1.5.2](https://github.com/Tosox/revanced-patches/compare/v1.5.1...v1.5.2) (2026-03-20)
 
 
