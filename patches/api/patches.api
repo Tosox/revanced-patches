@@ -1,3 +1,7 @@
+public final class de/tosox/revanced/patches/duolingo/premium/UnlockPremiumPatchKt {
+	public static final fun getUnlockPremiumPatch ()Lapp/revanced/patcher/patch/Patch;
+}
+
 public final class de/tosox/revanced/patches/earphonealarm/premium/UnlockPremiumPatchKt {
 	public static final fun getUnlockPremiumPatch ()Lapp/revanced/patcher/patch/Patch;
 }
