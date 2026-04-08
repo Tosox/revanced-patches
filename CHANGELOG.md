@@ -1,3 +1,10 @@
+# [1.6.0-dev.4](https://github.com/Tosox/revanced-patches/compare/v1.6.0-dev.3...v1.6.0-dev.4) (2026-04-08)
+
+
+### Bug Fixes
+
+* **Super Mario:** Refactor to shared permission removal patch ([29aaf11](https://github.com/Tosox/revanced-patches/commit/29aaf11fdaf6cc0235ced96a7d83655b2709a8f6))
+
 # [1.6.0-dev.3](https://github.com/Tosox/revanced-patches/compare/v1.6.0-dev.2...v1.6.0-dev.3) (2026-04-08)
 
 
