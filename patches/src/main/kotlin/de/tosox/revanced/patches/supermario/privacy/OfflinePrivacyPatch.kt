@@ -3,33 +3,14 @@ package de.tosox.revanced.patches.supermario.privacy
 import app.revanced.patcher.extensions.getInstruction
 import app.revanced.patcher.extensions.replaceInstruction
 import app.revanced.patcher.patch.bytecodePatch
-import app.revanced.patcher.patch.resourcePatch
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
-import de.tosox.revanced.util.childElementsSequence
-import de.tosox.revanced.util.getNode
+import de.tosox.revanced.util.removePermissionsPatch
 import de.tosox.revanced.util.returnEarly
 
-// TODO: Add to shared patches
-private val disableInternetPermissionPatch = resourcePatch {
-    apply {
-        document("AndroidManifest.xml").use { document ->
-            document.getNode("manifest").apply {
-                removeChild(
-                    childElementsSequence().first {
-                        it.attributes.getNamedItem("android:name")
-                            ?.nodeValue?.equals("android.permission.INTERNET") == true
-                    }
-                )
-                removeChild(
-                    childElementsSequence().first {
-                        it.attributes.getNamedItem("android:name")
-                            ?.nodeValue?.equals("android.permission.ACCESS_NETWORK_STATE") == true
-                    }
-                )
-            }
-        }
-    }
-}
+private val disableInternetPermissionPatch = removePermissionsPatch(
+    "android.permission.INTERNET",
+    "android.permission.ACCESS_NETWORK_STATE"
+)
 
 @Suppress("unused")
 val offlinePrivacyPatch = bytecodePatch(
