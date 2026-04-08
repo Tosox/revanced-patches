@@ -1,3 +1,17 @@
+# [1.6.0](https://github.com/Tosox/revanced-patches/compare/v1.5.2...v1.6.0) (2026-04-08)
+
+
+### Bug Fixes
+
+* **Super Mario:** Refactor to shared permission removal patch ([29aaf11](https://github.com/Tosox/revanced-patches/commit/29aaf11fdaf6cc0235ced96a7d83655b2709a8f6))
+* **TickTick:** Replace deprecated imports ([8bc637d](https://github.com/Tosox/revanced-patches/commit/8bc637d640c52920ab0674e9eb7cfc353d12ecdd))
+
+
+### Features
+
+* **Duolingo:** Add Unlock Premium patch ([0ee0bf3](https://github.com/Tosox/revanced-patches/commit/0ee0bf3f18a9751033a51257d95035b2e79653eb))
+* **Strong:** Add Unlock Pro patch ([274961d](https://github.com/Tosox/revanced-patches/commit/274961d012fd91c370652b0ca213b4ad488f6849))
+
 # [1.6.0-dev.4](https://github.com/Tosox/revanced-patches/compare/v1.6.0-dev.3...v1.6.0-dev.4) (2026-04-08)
 
 
