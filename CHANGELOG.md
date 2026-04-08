@@ -1,3 +1,10 @@
+# [1.6.0-dev.2](https://github.com/Tosox/revanced-patches/compare/v1.6.0-dev.1...v1.6.0-dev.2) (2026-04-08)
+
+
+### Features
+
+* **Duolingo:** Add Unlock Premium patch ([0ee0bf3](https://github.com/Tosox/revanced-patches/commit/0ee0bf3f18a9751033a51257d95035b2e79653eb))
+
 # [1.6.0-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.5.2...v1.6.0-dev.1) (2026-04-07)
 
 
