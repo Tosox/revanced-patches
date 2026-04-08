@@ -1,6 +1,6 @@
 package de.tosox.revanced.patches.ticktick.pro
 
-import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
+import app.revanced.patcher.extensions.addInstructions
 import app.revanced.patcher.patch.bytecodePatch
 import de.tosox.revanced.patches.ticktick.verify.noIntegrityCheckPatch
 import de.tosox.revanced.util.returnEarly
