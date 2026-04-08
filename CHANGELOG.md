@@ -1,3 +1,10 @@
+# [1.6.0-dev.3](https://github.com/Tosox/revanced-patches/compare/v1.6.0-dev.2...v1.6.0-dev.3) (2026-04-08)
+
+
+### Bug Fixes
+
+* **TickTick:** Replace deprecated imports ([8bc637d](https://github.com/Tosox/revanced-patches/commit/8bc637d640c52920ab0674e9eb7cfc353d12ecdd))
+
 # [1.6.0-dev.2](https://github.com/Tosox/revanced-patches/compare/v1.6.0-dev.1...v1.6.0-dev.2) (2026-04-08)
 
 
