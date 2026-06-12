@@ -1,16 +1,47 @@
-package de.tosox.revanced.patches.duolingo.premium
+package de.tosox.revanced.patches.duolingo
 
-import app.revanced.patcher.CompositeMatch
+import app.revanced.patcher.*
 import app.revanced.patcher.extensions.addInstruction
 import app.revanced.patcher.extensions.fieldReference
 import app.revanced.patcher.extensions.getInstruction
+import app.revanced.patcher.patch.BytecodePatchContext
 import app.revanced.patcher.patch.bytecodePatch
+import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import de.tosox.revanced.util.findEnumStaticField
 
+internal val BytecodePatchContext.userSyntheticConstructorFingerprint by composingFirstMethod {
+    name("<init>")
+    definingClass("User;")
+    returnType("V")
+    instructions(
+        allOf(
+            Opcode.IPUT_OBJECT(),
+            field { type.endsWith("SubscriberLevel;") }
+        ),
+        method("getDescriptor")
+    )
+}
+
+internal val BytecodePatchContext.userConstructorFingerprint by composingFirstMethod(
+    "id",
+    "betaStatus",
+    "subscriberLevel"
+) {
+    name("<init>")
+    definingClass("User;")
+    returnType("V")
+    instructions(
+        allOf(
+            Opcode.IPUT_OBJECT(),
+            field { type.endsWith("SubscriberLevel;") }
+        )
+    )
+}
+
 @Suppress("unused")
-val patch = bytecodePatch(
+val unlockPremiumPatch = bytecodePatch(
     name = "Unlock Premium",
     description = "Unlocks the Premium subscription",
 ) {

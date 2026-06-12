@@ -1,4 +1,4 @@
-package de.tosox.revanced.patches.flatastic.premium
+package de.tosox.revanced.patches.flatastic
 
 import app.revanced.patcher.patch.rawResourcePatch
 
