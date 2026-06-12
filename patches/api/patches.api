@@ -1,41 +1,41 @@
-public final class de/tosox/revanced/patches/duolingo/premium/UnlockPremiumPatchKt {
+public final class de/tosox/revanced/patches/duolingo/UnlockPremiumPatchKt {
 	public static final fun getUnlockPremiumPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
-public final class de/tosox/revanced/patches/earphonealarm/premium/UnlockPremiumPatchKt {
+public final class de/tosox/revanced/patches/earphonealarm/UnlockPremiumPatchKt {
 	public static final fun getUnlockPremiumPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
-public final class de/tosox/revanced/patches/flatastic/premium/UnlockPremiumPatchKt {
+public final class de/tosox/revanced/patches/flatastic/UnlockPremiumPatchKt {
 	public static final fun getUnlockPremiumPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
-public final class de/tosox/revanced/patches/kicker/plus/UnlockPlusPatchKt {
+public final class de/tosox/revanced/patches/kicker/UnlockPlusPatchKt {
 	public static final fun getUnlockPlusPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
-public final class de/tosox/revanced/patches/kicker/pur/UnlockPurPatchKt {
+public final class de/tosox/revanced/patches/kicker/UnlockPurPatchKt {
 	public static final fun getUnlockPurPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
-public final class de/tosox/revanced/patches/mega/ads/HideAdsPatchKt {
+public final class de/tosox/revanced/patches/mega/HideAdsPatchKt {
 	public static final fun getHideAdsPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
-public final class de/tosox/revanced/patches/strong/pro/UnlockProPatchKt {
+public final class de/tosox/revanced/patches/strong/UnlockProPatchKt {
 	public static final fun getUnlockProPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
-public final class de/tosox/revanced/patches/supermario/privacy/OfflinePrivacyPatchKt {
+public final class de/tosox/revanced/patches/supermario/OfflinePrivacyPatchKt {
 	public static final fun getOfflinePrivacyPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
-public final class de/tosox/revanced/patches/ticktick/pro/UnlockProPatchKt {
-	public static final fun getUnlockProPatch ()Lapp/revanced/patcher/patch/Patch;
+public final class de/tosox/revanced/patches/ticktick/NoIntegrityCheckPatchKt {
+	public static final fun getNoIntegrityCheckPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
-public final class de/tosox/revanced/patches/ticktick/verify/NoIntegrityCheckPatchKt {
-	public static final fun getNoIntegrityCheckPatch ()Lapp/revanced/patcher/patch/Patch;
+public final class de/tosox/revanced/patches/ticktick/UnlockProPatchKt {
+	public static final fun getUnlockProPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
 public final class de/tosox/revanced/util/BytecodeUtilsExKt {

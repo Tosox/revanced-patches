@@ -1,4 +1,4 @@
-package de.tosox.revanced.extension.ticktick.pro;
+package de.tosox.revanced.extension.ticktick;
 
 import com.ticktick.task.data.User;
 
