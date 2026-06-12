@@ -40,6 +40,7 @@ public final class de/tosox/revanced/patches/ticktick/UnlockProPatchKt {
 
 public final class de/tosox/revanced/util/BytecodeUtilsExKt {
 	public static final fun findEnumStaticField (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+	public static final fun injectEnumReturnByConstants (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 	public static final fun injectEnumReturnByString (Lapp/revanced/patcher/patch/BytecodePatchContext;Lapp/revanced/com/android/tools/smali/dexlib2/mutable/MutableMethod;Ljava/lang/String;Ljava/lang/String;)V
 	public static synthetic fun injectEnumReturnByString$default (Lapp/revanced/patcher/patch/BytecodePatchContext;Lapp/revanced/com/android/tools/smali/dexlib2/mutable/MutableMethod;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
 }

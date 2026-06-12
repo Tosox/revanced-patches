@@ -3,9 +3,11 @@ package de.tosox.revanced.util
 import app.revanced.com.android.tools.smali.dexlib2.mutable.MutableMethod
 import app.revanced.patcher.extensions.addInstructions
 import app.revanced.patcher.extensions.getInstruction
+import app.revanced.patcher.firstClassDef
 import app.revanced.patcher.firstMethodComposite
 import app.revanced.patcher.name
 import app.revanced.patcher.patch.BytecodePatchContext
+import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.strings
 import app.revanced.patcher.type
 import com.android.tools.smali.dexlib2.Opcode
@@ -58,4 +60,22 @@ fun BytecodePatchContext.injectEnumReturnByString(
             return-object v0
         """
     )
+}
+
+fun BytecodePatchContext.injectEnumReturnByConstants(
+    classType: String,
+    returnConstant: String,
+    vararg enumConstants: String,
+) {
+    val match = firstMethodComposite {
+        name("<clinit>")
+        strings(*enumConstants)
+    }
+    val enumType = match.method.definingClass
+
+    val targetMethod = firstClassDef(classType).methods
+        .firstOrNull { it.returnType == enumType }
+        ?: throw PatchException("No method returning enum '$enumType' found in class: $classType")
+
+    injectEnumReturnByString(targetMethod, returnConstant, enumType)
 }
