@@ -1,11 +1,24 @@
-package de.tosox.revanced.patches.ticktick.pro
+package de.tosox.revanced.patches.ticktick
 
+import app.revanced.patcher.definingClass
 import app.revanced.patcher.extensions.addInstructions
+import app.revanced.patcher.gettingFirstMethodDeclaratively
+import app.revanced.patcher.name
+import app.revanced.patcher.patch.BytecodePatchContext
 import app.revanced.patcher.patch.bytecodePatch
-import de.tosox.revanced.patches.ticktick.verify.noIntegrityCheckPatch
 import de.tosox.revanced.util.returnEarly
 
-internal const val EXTENSION_CLASS_DESCRIPTOR = "Lde/tosox/revanced/extension/ticktick/pro/UnlockProPatch;"
+internal const val EXTENSION_CLASS_DESCRIPTOR = "Lde/tosox/revanced/extension/ticktick/UnlockProPatch;"
+
+internal val BytecodePatchContext.isProFingerprint by gettingFirstMethodDeclaratively {
+    name("isPro")
+    definingClass("User;")
+}
+
+internal val BytecodePatchContext.getProTypeForFakeFingerprint by gettingFirstMethodDeclaratively {
+    name("getProTypeForFake")
+    definingClass("User;")
+}
 
 @Suppress("unused")
 val unlockProPatch = bytecodePatch(
