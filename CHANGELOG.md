@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/Tosox/revanced-patches/compare/v1.7.0...v1.7.1) (2026-06-12)
+
+
+### Bug Fixes
+
+* **kicker:** Update utils to fix patch ([ca87a8b](https://github.com/Tosox/revanced-patches/commit/ca87a8b3a34f62ba3ad2fa134210a5a8720ea659))
+
 ## [1.7.1-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.7.0...v1.7.1-dev.1) (2026-06-12)
 
 
