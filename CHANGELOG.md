@@ -1,3 +1,15 @@
+# [1.7.0-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.6.0...v1.7.0-dev.1) (2026-06-12)
+
+
+### Bug Fixes
+
+* **kicker:** Update Pur & Plus patches ([22897d1](https://github.com/Tosox/revanced-patches/commit/22897d152bc2c9ab474596bca053965d910dffc4))
+
+
+### Features
+
+* Add helper method ([4e0df49](https://github.com/Tosox/revanced-patches/commit/4e0df499d760b94054a933c24fe08fadb0dca1da))
+
 # [1.6.0](https://github.com/Tosox/revanced-patches/compare/v1.5.2...v1.6.0) (2026-04-08)
 
 
