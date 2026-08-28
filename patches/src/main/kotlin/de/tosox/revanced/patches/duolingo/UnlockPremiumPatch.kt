@@ -24,11 +24,7 @@ internal val BytecodePatchContext.userSyntheticConstructorFingerprint by composi
     )
 }
 
-internal val BytecodePatchContext.userConstructorFingerprint by composingFirstMethod(
-    "id",
-    "betaStatus",
-    "subscriberLevel"
-) {
+internal val BytecodePatchContext.userConstructorFingerprint by composingFirstMethod {
     name("<init>")
     definingClass("User;")
     returnType("V")
@@ -38,6 +34,11 @@ internal val BytecodePatchContext.userConstructorFingerprint by composingFirstMe
             field { type.endsWith("SubscriberLevel;") }
         )
     )
+    noneOf {
+        instructions(
+            method("getDescriptor")
+        )
+    }
 }
 
 @Suppress("unused")
@@ -45,7 +46,7 @@ val unlockPremiumPatch = bytecodePatch(
     name = "Unlock Premium",
     description = "Unlocks the Premium subscription",
 ) {
-    // Tested with 6.73.3
+    // Tested with 6.93.6
     compatibleWith("com.duolingo")
 
     apply {
