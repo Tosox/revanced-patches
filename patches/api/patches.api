@@ -22,6 +22,10 @@ public final class de/tosox/revanced/patches/mega/HideAdsPatchKt {
 	public static final fun getHideAdsPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
+public final class de/tosox/revanced/patches/strong/HidePreviousSetPatchKt {
+	public static final fun getHidePreviousSetPatch ()Lapp/revanced/patcher/patch/Patch;
+}
+
 public final class de/tosox/revanced/patches/strong/UnlockProPatchKt {
 	public static final fun getUnlockProPatch ()Lapp/revanced/patcher/patch/Patch;
 }
