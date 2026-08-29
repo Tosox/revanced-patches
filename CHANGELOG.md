@@ -1,3 +1,11 @@
+## [1.7.3-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.7.2...v1.7.3-dev.1) (2026-08-29)
+
+
+### Bug Fixes
+
+* **Duolingo:** Fix Unlock Premium patch ([f82d3d6](https://github.com/Tosox/revanced-patches/commit/f82d3d616a9fc622eb29838e41d02e3ad3e3b4c0))
+* **Duolingo:** Fix Unlock Premium patch ([a24e0b0](https://github.com/Tosox/revanced-patches/commit/a24e0b0124eedd6bee385c4c70cc5cc870cab4d5))
+
 ## [1.7.2](https://github.com/Tosox/revanced-patches/compare/v1.7.1...v1.7.2) (2026-08-29)
 
 
