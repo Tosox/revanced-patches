@@ -34,8 +34,8 @@ internal val BytecodePatchContext.userConstructorFingerprint by composingFirstMe
             field { type.endsWith("SubscriberLevel;") }
         )
     )
-    instructions(
-        noneOf(
+    noneOf(
+        instructions(
             method("getDescriptor")
         )
     )
