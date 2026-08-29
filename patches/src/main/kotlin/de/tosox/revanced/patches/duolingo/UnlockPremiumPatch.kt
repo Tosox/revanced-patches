@@ -34,11 +34,11 @@ internal val BytecodePatchContext.userConstructorFingerprint by composingFirstMe
             field { type.endsWith("SubscriberLevel;") }
         )
     )
-    noneOf(
+    noneOf {
         instructions(
             method("getDescriptor")
         )
-    )
+    }
 }
 
 @Suppress("unused")
