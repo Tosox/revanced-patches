@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/Tosox/revanced-patches/compare/v1.7.3...v1.8.0) (2026-09-04)
+
+
+### Features
+
+* **Duolingo:** Add Keep Classic App Icon patch ([6773af9](https://github.com/Tosox/revanced-patches/commit/6773af951f8cc62791858bd5fd2f8eb7938c719e))
+
 # [1.8.0-dev.1](https://github.com/Tosox/revanced-patches/compare/v1.7.3...v1.8.0-dev.1) (2026-09-04)
 
 
