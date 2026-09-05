@@ -18,6 +18,10 @@ public final class de/tosox/revanced/patches/kicker/UnlockPurPatchKt {
 	public static final fun getUnlockPurPatch ()Lapp/revanced/patcher/patch/Patch;
 }
 
+public final class de/tosox/revanced/patches/kicktipp/HideAdsPatchKt {
+	public static final fun getHideAdsPatch ()Lapp/revanced/patcher/patch/Patch;
+}
+
 public final class de/tosox/revanced/patches/mega/HideAdsPatchKt {
 	public static final fun getHideAdsPatch ()Lapp/revanced/patcher/patch/Patch;
 }
